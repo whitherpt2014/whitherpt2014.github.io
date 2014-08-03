@@ -71,12 +71,22 @@
 <header class="header">
   <div class="wrapper">
 
-    <h1 class="logo-name1">Whither</h1>
-    <h1 class="logo-name2">Political</h1>
-    <h1 class="logo-name3">Theatre?</h1>
-    <h2 class="tagline">19-20 September 2014, St John’s College, University of Cambridge, Cambridge</h2>
+    <h1 class="logo-name1"><%= @conf.name1 %><br /></h1>
+    <h1 class="logo-name2"><%= @conf.name2 %><br /></h1>
+    <h1 class="logo-name3"><%= @conf.name3 %><br /></h1>
+    <h2 class="tagline"><%= @conf.date %>, <%= @conf.venue %>, <%= @conf.city %></h2>
 
-    
+    <% if @conf.price || @callToAction: %>
+      <div class="call-action-area">
+        <% if @conf.price: %>
+          <span class="price">Only <%= @conf.price %></span>
+        <% end %>
+
+        <% if @callToAction: %>
+          <a href="<%= @callToAction.link %>" class="call-action-link" title="<%= @callToAction.text %>"><%= @callToAction.text %></a>
+        <% end %>
+      </div>
+    <% end %>
 
   </div>
 </header>
@@ -340,620 +350,48 @@ University Accommodation.
 
   <section class="schedule" id="schedule">
     <h2 class="section-title">Schedule</h2>
-
-  <h3>16-18 September 2014</h3>
-  <p><i>Judith E. Wilson Drama Studio, Faculty of English, West Road</i></p>
-
- <section class="about" id="about">
-    <h4 class="section-title">Théâtre du Soleil workshop</h4>
-<p itemprop="description">
-We have organised an intensive three-day workshop, sponsored by the British Academy, and led by two members of the world renowned international theatre company Théâtre du Soleil, which has toured its large-scale intercultural theatre productions all over the world. More details are available <a href="workshop.pdf">here</a>. If you are interested in taking part, please contact 
-<a href="&#109;a&#105;lto&#58;%65%6B&#37;&#55;522&#64;&#37;63am%2&#69;&#97;c%2Euk">Eva Urban</a>.
-</p>
-
-</section>
-
-<br />
-
-
-  <h3>Thursday, 18 September 2014</h3>
-  <p><i>Judith E. Wilson Drama Studio, Faculty of English, West Road</i></p>
-  
-
-    <div class="schedule-tbl">
-      <table>
-        <thead>
-          <tr>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+<div class="schedule-tbl">
+  <table>
+    <thead>
+      <tr>
         <th class="schedule-time">Time</th>
         <th class="schedule-slot">Slot</th>
-        <th class="schedule-description">Title/Description</th>
-          </tr>
-        </thead>
-        <tbody>
+        <th class="schedule-description">Description</th>
+      </tr>
+    </thead>
+    <tbody>
 
-          
-        
-          <tr>
-            <td class="schedule-time">19h00</td>
-            <td class="schedule-slot">
-            
-            Théâtre du Soleil workshop rehearsal
-              <span class="speakers-company">Judith E. Wilson Drama Studio, Faculty of English</span>
-            </td>
-            <td class="schedule-description">Conference delegates are invited to attend an open-doors event to observe the rehearsal work-in-progress of a three-day workshop led by Théâtre du Soleil members Dominique Jambert and Vincent Mangado from 16-18 September. During the workshop in Cambridge, the company members will work on Macbeth with students and other participants to explore possibilities of collective creation and political theatre. Participants will work with text and imagination, employing physical theatre techniques, music, costumes, and masks.
- There will be an opportunity for delegates to arrange to meet for informal drinks and dinner after 8 pm.
-
-            </td>
-          </tr>
-        
-          
-
-        </tbody>
-      </table>
-    </div>
-        <br /><br />
-
-
-  <h3>Friday, 19 September 2014</h3>
-  <p><i>Fisher Building, St. John's College</i></p>
-  
-
-    <div class="schedule-tbl">
-      <table>
-        <thead>
-          <tr>
-        <th class="schedule-time">Time</th>
-        <th class="schedule-slot">Slot</th>
-        <th class="schedule-description">Title/Description</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          
-        
-          <tr>
-            <td class="schedule-time">8h30</td>
-            <td class="schedule-slot">
-            
-            Check-in / Registration
-              <span class="speakers-company"></span>
-            </td>
-            <td class="schedule-description">-
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">9h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Eva Urban">
-              </span>
-            
-            Dr Eva Urban
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">Opening Address
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">9h20</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/dmilne.jpg" alt="Dr Drew Milne">
-              </span>
-            
-            Dr Drew Milne
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
-
-            </td>
-          </tr>
-        
-          
+      
         
           <tr class="schedule-other">
-            <td class="schedule-time">10h15</td>
-            <td class="schedule-slot">Morning Coffee</td>
-                    
-               <td class="schedule-description">
-            
-            </td>
-
+            <td class="schedule-time"></td>
+            <td class="schedule-slot"></td>
+            <td class="schedule-description">-</td>
           </tr>
         
-          
-        
-          <tr>
-            <td class="schedule-time">10h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr George Oppitz-Trotman">
-              </span>
-            
-            Dr George Oppitz-Trotman
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">Shakespeare’s Abandoned Cave: Bertolt Brecht and the Dialectic of ‘Greatness’
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">10h50</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Shane Kinghorn">
-              </span>
-            
-            Dr Shane Kinghorn
-              <span class="speakers-company">Manchester Metropolitan University</span>
-            </td>
-            <td class="schedule-description">Speaking Machines: the dialectical voice in contemporary verbatim theatre
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">11h10</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Kate Katafiasz">
-              </span>
-            
-            Dr Kate Katafiasz
-              <span class="speakers-company">Newman University, Birmingham</span>
-            </td>
-            <td class="schedule-description">Dramatic Autonomy
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">11h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Christina Papagiannouli">
-              </span>
-            
-            Dr Christina Papagiannouli
-              <span class="speakers-company">University of East London</span>
-            </td>
-            <td class="schedule-description">The Etheatre Project: Directing Cyber-Brechtian Theatre
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">12h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr David Barnett">
-              </span>
-            
-            Dr David Barnett
-              <span class="speakers-company">University of Sussex</span>
-            </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
-
-            </td>
-          </tr>
-        
-          
+      
         
           <tr class="schedule-other">
-            <td class="schedule-time">13h00</td>
-            <td class="schedule-slot">Lunch</td>
-                    
-               <td class="schedule-description">
-            
-            </td>
-
+            <td class="schedule-time"></td>
+            <td class="schedule-slot"></td>
+            <td class="schedule-description">-</td>
           </tr>
         
-          
-        
-          <tr>
-            <td class="schedule-time">14h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Polina Rybina">
-              </span>
-            
-            Dr Polina Rybina
-              <span class="speakers-company">Lomonosov Moscow State University</span>
-            </td>
-            <td class="schedule-description">Madness as a Critical Aesthetic Response: Verfremdungseffekt in the theatre of Yury Pogrevnichko
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">14h20</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Carmen Levick">
-              </span>
-            
-            Dr Carmen Levick
-              <span class="speakers-company">Sheffield University</span>
-            </td>
-            <td class="schedule-description">Let’s do a Revolution: representing the Romanian revolution in performance after 2000
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">14h40</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Beatrix Kricsfalusi">
-              </span>
-            
-            Dr Beatrix Kricsfalusi
-              <span class="speakers-company">University of Debrecen</span>
-            </td>
-            <td class="schedule-description">Theatricality as Medium of the Political: Árpád Schillings The Party (2014) and the Contemporary Hungarian Theatre Scene
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">15h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Gigi Argyropoulo">
-              </span>
-            
-            Gigi Argyropoulo
-              <span class="speakers-company">Roehampton University</span>
-            </td>
-            <td class="schedule-description">Theatres in Crisis and the Political Turn 
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">15h20</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Laura Higgins">
-              </span>
-            
-            Dr Laura Higgins
-              <span class="speakers-company">Oxford Brookes University</span>
-            </td>
-            <td class="schedule-description">Opening up Spaces of Hope: Rethinking the Politics of Empowerment in Theatre
-
-            </td>
-          </tr>
-        
-          
+      
         
           <tr class="schedule-other">
-            <td class="schedule-time">16h00</td>
-            <td class="schedule-slot">Afternoon Coffee</td>
-                    
-               <td class="schedule-description">
-            
-            </td>
-
+            <td class="schedule-time"></td>
+            <td class="schedule-slot"></td>
+            <td class="schedule-description">-</td>
           </tr>
         
-          
-        
-          <tr>
-            <td class="schedule-time">16h15</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Bérénice Hamidi Kim">
-              </span>
-            
-            Dr Bérénice Hamidi Kim
-              <span class="speakers-company">Université de Lyon 2</span>
-            </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
+      
 
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">17h00</td>
-            <td class="schedule-slot">
-            
-            Panel Discussion: Making Political Theatre
-              <span class="speakers-company">Chair: Dr Joseph Long (University College Dublin)</span>
-            </td>
-            <td class="schedule-description">Discussants: Professor Victor Merriman (Edgehill University), Andrew Sherlock (Liverpool John Moore’s University/Dramatist), Vincent Mangado and Dominique Jambert (Théâtre du Soleil), Michael Walling (Border Crossings), Dr Zoe Svendsen (University of Cambridge/Metis Arts), Steve Waters (University of East Anglia/Dramatist)
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr class="schedule-other">
-            <td class="schedule-time">19h00</td>
-            <td class="schedule-slot">Formal Dinner</td>
-                    
-               <td class="schedule-description">Wordsworth Room, St John’s College</td>
-            
-            </td>
-
-          </tr>
-        
-          
-
-        </tbody>
-      </table>
-    </div>
-        <br /><br />
-
-
-  <h3>Saturday, 20 September 2014</h3>
-  <p><i>Fisher Building, St. John's College</i></p>
-  
-
-    <div class="schedule-tbl">
-      <table>
-        <thead>
-          <tr>
-        <th class="schedule-time">Time</th>
-        <th class="schedule-slot">Slot</th>
-        <th class="schedule-description">Title/Description</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          
-        
-          <tr>
-            <td class="schedule-time">9h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Niklas Füllner">
-              </span>
-            
-            Dr Niklas Füllner
-              <span class="speakers-company">Ruhr University Bochum</span>
-            </td>
-            <td class="schedule-description">Theatre as Community: New Drama from Finland in the tradition of Bertolt Brecht
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">9h20</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Ragnhild Freng Dale">
-              </span>
-            
-            Ragnhild Freng Dale
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">Creating community by means of performance: walking the German-Polish borderland
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">9h40</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Jonas Tinius">
-              </span>
-            
-            Jonas Tinius
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">Authority, Freedom and Reflexivity: How refugee theatre engages political aesthetics and vice versa
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">10h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Anna Seymour">
-              </span>
-            
-            Dr Anna Seymour
-              <span class="speakers-company">University of Cambridge</span>
-            </td>
-            <td class="schedule-description">The political is the personal - political aesthetics changing lives
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr class="schedule-other">
-            <td class="schedule-time">10h30</td>
-            <td class="schedule-slot">Morning Coffee</td>
-                    
-               <td class="schedule-description">
-            
-            </td>
-
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">10h45</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Fabrizio Deriu">
-              </span>
-            
-            Dr Fabrizio Deriu
-              <span class="speakers-company">University of Teramo</span>
-            </td>
-            <td class="schedule-description">Anti-Biography of a Nation by Fabrizio Gifuni: Can Present-Day Italy be reproduced by means of theatre?
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">11h05</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Prof. Hana Worthen">
-              </span>
-            
-            Prof. Hana Worthen
-              <span class="speakers-company">Barnard College, Columbia University, New York</span>
-            </td>
-            <td class="schedule-description">Kristian Smed’s Mental Finland: The European Subject and the Political
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">11h25</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr Charlotte Bomy">
-              </span>
-            
-            Dr Charlotte Bomy
-              <span class="speakers-company">University of Montpellier II</span>
-            </td>
-            <td class="schedule-description">“Post-migrant theatre”: a new way for political theatre?
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">12h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/mshevtsova.jpg" alt="Prof. Maria Shevtsova">
-              </span>
-            
-            Prof. Maria Shevtsova
-              <span class="speakers-company">Goldsmiths University of London</span>
-            </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr class="schedule-other">
-            <td class="schedule-time">13h00</td>
-            <td class="schedule-slot">Lunch</td>
-                    
-               <td class="schedule-description">
-            
-            </td>
-
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">14h00-15h30</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/hcixous.jpg" alt="Prof. Hélène Cixous">
-              </span>
-            
-            Prof. Hélène Cixous
-              <span class="speakers-company">Université de Paris 8</span>
-            </td>
-            <td class="schedule-description">Interview/Roundtable Discussion with Professor Hélène Cixous. Panel: Professor Marta Segarra (University of Barcelona), Dr Eric Prenowitz (University of Leeds), Dr Drew Milne (University of Cambridge), Dr Eva Urban (University of Cambridge), Dr Joseph Long (University College Dublin), Professor Maria Shevtsova (Goldsmiths University of London).
-
-            </td>
-          </tr>
-        
-          
-        
-          <tr>
-            <td class="schedule-time">16h00-17h00</td>
-            <td class="schedule-slot">
-            
-              <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Steve Waters">
-              </span>
-            
-            Steve Waters
-              <span class="speakers-company"></span>
-            </td>
-            <td class="schedule-description">Performance by Steve Waters: In a Vulnerable Place.
-
-            </td>
-          </tr>
-        
-          
-
-        </tbody>
-      </table>
-    </div>
-        <br /><br />
-
-
+    </tbody>
+  </table>
+</div>
 
   </section>
 
