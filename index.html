@@ -67,17 +67,17 @@
 </nav>
 
 <hr>
-    
-
-<!-- HEADER -->
+    <!-- HEADER -->
 <header class="header">
   <div class="wrapper">
-    <h1 class="logo-name">
-      <a class="logo-link" href="#" title="Whither Political Theatre?" itemprop="name">Whither Political Theatre?</a>
-    </h1>
+
+    <h1 class="logo-name1">Whither</h1>
+    <h1 class="logo-name2">Political</h1>
+    <h1 class="logo-name3">Theatre?</h1>
     <h2 class="tagline">19-20 September 2014, St John’s College, University of Cambridge, Cambridge</h2>
 
     
+
   </div>
 </header>
 <!--  / HEADER -->
@@ -129,21 +129,21 @@ Organising Committee: Dr Eva Urban, Dr Drew Milne, FBA Professor John Kerrigan</
   <!-- LOCATION -->
 
   <section class="location" id="location">
-    <h2 class="section-title"><%= @labels['location'] %></h2>
+    <h2 class="section-title">Location</h2>
 
 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <span itemprop="streetAddress"><%= @conf.address %>. </span>
-  <span itemprop="addressLocality"><%= @conf.city %></span>,
-  <span itemprop="addressRegion"> <%= @conf.state %></span>.
+  <span itemprop="streetAddress">St John's College. </span>
+  <span itemprop="addressLocality">Cambridge</span>,
+  <span itemprop="addressRegion"> United Kingdom</span>.
 <br />  
 <a href="../../travel.html">Detailed travel information.</a>
 <br />
 <a href="http://www.universityrooms.com/en/city/cambridge/home?gclid=CK-phN72978CFVMRtAodxxUASA">
-University Accommodation
+University Accommodation.
 </a>
 </p>
 
-<div id="map-canvas" class="location-area" data-address="<%= @conf.googleloc %>"></div>
+<div id="map-canvas" class="location-area" data-address="St John's College, Cambridge, United Kingdom"></div>
 
   </section>
 
