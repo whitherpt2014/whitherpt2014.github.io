@@ -67,17 +67,17 @@
 </nav>
 
 <hr>
-    <!-- HEADER -->
+    
+
+<!-- HEADER -->
 <header class="header">
   <div class="wrapper">
-
-    <h1 class="logo-name1">Whither</h1>
-    <h1 class="logo-name2">Political</h1>
-    <h1 class="logo-name3">Theatre?</h1>
+    <h1 class="logo-name">
+      <a class="logo-link" href="#" title="Whither Political Theatre?" itemprop="name">Whither Political Theatre?</a>
+    </h1>
     <h2 class="tagline">19-20 September 2014, St John’s College, University of Cambridge, Cambridge</h2>
 
     
-
   </div>
 </header>
 <!--  / HEADER -->
@@ -129,21 +129,21 @@ Organising Committee: Dr Eva Urban, Dr Drew Milne, FBA Professor John Kerrigan</
   <!-- LOCATION -->
 
   <section class="location" id="location">
-    <h2 class="section-title">Location</h2>
+    <h2 class="section-title"><%= @labels['location'] %></h2>
 
 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <span itemprop="streetAddress">St John's College. </span>
-  <span itemprop="addressLocality">Cambridge</span>,
-  <span itemprop="addressRegion"> United Kingdom</span>.
+  <span itemprop="streetAddress"><%= @conf.address %>. </span>
+  <span itemprop="addressLocality"><%= @conf.city %></span>,
+  <span itemprop="addressRegion"> <%= @conf.state %></span>.
 <br />  
 <a href="../../travel.html">Detailed travel information.</a>
 <br />
 <a href="http://www.universityrooms.com/en/city/cambridge/home?gclid=CK-phN72978CFVMRtAodxxUASA">
-University Accommodation.
+University Accommodation
 </a>
 </p>
 
-<div id="map-canvas" class="location-area" data-address="St John's College, Cambridge, United Kingdom"></div>
+<div id="map-canvas" class="location-area" data-address="<%= @conf.googleloc %>"></div>
 
   </section>
 
@@ -158,17 +158,17 @@ University Accommodation.
 
 
   
-    
-      
-    
-
   
     
-      
+  
+
+  
+  
     
-      
+  
     
-      
+  
+    
         <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
           
         <span class="speaker-photo">
@@ -181,30 +181,35 @@ University Accommodation.
           <span class="speech-time">9h20</span>
         
        -->
-          <span> Keynote: &lt;KEYNOTE TITLE HERE&gt;</span>
+          <span> </span>
           </h3>
            
 
-          <h3 class="speakers-name">Dr Drew Milne <a href="http://www.english.cam.ac.uk/people/Milne/Drew/" title="Web">Web</a></h3>
-          <p class="speakers-bio">&lt;Bio here&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          <h3 class="speakers-name">Dr Drew Milne 
+            
+                  <a href="http://www.english.cam.ac.uk/people/Milne/Drew/" title="Webpage">Webpage</a>
+            
+          </h3>          
+              
+              
         </li>
-      
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
+    
         <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
           
         <span class="speaker-photo">
-          <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr David Barnett" itemprop="image">
+          <img class="photo" src="themes/yellow-swan/img/dbarnett.jpg" alt="Dr David Barnett" itemprop="image">
         </span>
           
 
@@ -213,30 +218,37 @@ University Accommodation.
           <span class="speech-time">12h00</span>
         
        -->
-          <span> Keynote: &lt;KEYNOTE TITLE HERE&gt;</span>
+          <span> Keynote: Whither Dialectical Theatre? Confronting Nazism Then and Now</span>
           </h3>
            
 
-          <h3 class="speakers-name">Dr David Barnett <a href="http://www.google.com" title="&lt;LINK HERE&gt;">&lt;LINK HERE&gt;</a></h3>
-          <p class="speakers-bio">&lt;bio here&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          <h3 class="speakers-name">Dr David Barnett 
+            
+                  <a href="http://www.sussex.ac.uk/profiles/198222" title="Webpage">Webpage</a>
+            
+          </h3>          
+              
+                <p class="speakers-bio">David Barnett is Reader in Drama, Theatre and Performance at the University of Sussex. He has published monographs on Heiner Müller (Peter Lang, 1998) and Rainer Werner Fassbinder (CUP, 2005), the latter as a Fellow of the Humboldt Foundation. &quot;A History of the Berliner Ensemble and Brecht in Practice: Theatre, Theory and Performance&quot; will be published in the coming months and are the major results of a project funded by a British Academy Research Development Award and an AHRC Fellowship. He has written several articles and essays on German, English-language, political and postdramatic theatre.</p>
+              
+              
         </li>
-      
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
+    
         <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
           
         <span class="speaker-photo">
@@ -249,39 +261,44 @@ University Accommodation.
           <span class="speech-time">16h15</span>
         
        -->
-          <span> Keynote: &lt;KEYNOTE TITLE HERE&gt;</span>
+          <span> </span>
           </h3>
            
 
-          <h3 class="speakers-name">Dr Bérénice Hamidi Kim <a href="http://www.google.com" title="&lt;LINK HERE&gt;">&lt;LINK HERE&gt;</a></h3>
-          <p class="speakers-bio">&lt;bio here&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          <h3 class="speakers-name">Dr Bérénice Hamidi Kim 
+            
+                  <a href="http://recherche.univ-lyon2.fr/passagesXX-XXI/73-HAMIDI-KIM-Berenice.html" title="Webpage">Webpage</a>
+            
+          </h3>          
+              
+              
         </li>
-      
     
-      
-    
-      
-    
-
   
     
-      
+  
     
-      
+  
+
+  
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
     
-      
+  
+    
+  
+    
         <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
           
         <span class="speaker-photo">
@@ -294,18 +311,23 @@ University Accommodation.
           <span class="speech-time">12h00</span>
         
        -->
-          <span> Keynote: &lt;KEYNOTE TITLE HERE&gt;</span>
+          <span> </span>
           </h3>
            
 
-          <h3 class="speakers-name">Prof. Maria Shevtsova <a href="" title="&lt;LINK HERE&gt;">&lt;LINK HERE&gt;</a></h3>
-          <p class="speakers-bio">&lt;Bio here&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          <h3 class="speakers-name">Prof. Maria Shevtsova 
+            
+                  <a href="http://www.gold.ac.uk/theatre-performance/staff/academic/m-shevtsova/" title="Webpage">Webpage</a>
+            
+          </h3>          
+              
+              
         </li>
-      
     
-      
+  
     
-      
+  
+    
         <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
           
         <span class="speaker-photo">
@@ -322,13 +344,22 @@ University Accommodation.
           </h3>
            
 
-          <h3 class="speakers-name">Prof. Hélène Cixous <a href="" title="&lt;LINK HERE&gt;">&lt;LINK HERE&gt;</a></h3>
-          <p class="speakers-bio">&lt;Bio here&gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+          <h3 class="speakers-name">Prof. Hélène Cixous 
+            
+                  <a href="" title=""></a>
+            
+          </h3>          
+              
+              
+                <p class="speakers-bio">
+                  <a href="hcixous_bio.pdf" title="Prof. Hélène Cixous biography">Prof. Hélène Cixous biography</a>
+                </p>
+              
         </li>
-      
     
-      
+  
     
+  
 
 </ul>
 
@@ -353,6 +384,7 @@ We have organised an intensive three-day workshop, sponsored by the British Acad
 
 </section>
 
+<br />
 <br />
 
 
@@ -454,7 +486,7 @@ We have organised an intensive three-day workshop, sponsored by the British Acad
             Dr Drew Milne
               <span class="speakers-company">University of Cambridge</span>
             </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
+            <td class="schedule-description">
 
             </td>
           </tr>
@@ -550,13 +582,13 @@ We have organised an intensive three-day workshop, sponsored by the British Acad
             <td class="schedule-slot">
             
               <span class="speaker-photo">
-                <img class="photo" src="themes/yellow-swan/img/speaker.jpg" alt="Dr David Barnett">
+                <img class="photo" src="themes/yellow-swan/img/dbarnett.jpg" alt="Dr David Barnett">
               </span>
             
             Dr David Barnett
               <span class="speakers-company">University of Sussex</span>
             </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
+            <td class="schedule-description">Keynote: Whither Dialectical Theatre? Confronting Nazism Then and Now
 
             </td>
           </tr>
@@ -688,7 +720,7 @@ We have organised an intensive three-day workshop, sponsored by the British Acad
             Dr Bérénice Hamidi Kim
               <span class="speakers-company">Université de Lyon 2</span>
             </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
+            <td class="schedule-description">
 
             </td>
           </tr>
@@ -893,7 +925,7 @@ We have organised an intensive three-day workshop, sponsored by the British Acad
             Prof. Maria Shevtsova
               <span class="speakers-company">Goldsmiths University of London</span>
             </td>
-            <td class="schedule-description">Keynote: &lt;KEYNOTE TITLE HERE&gt;
+            <td class="schedule-description">
 
             </td>
           </tr>
@@ -983,7 +1015,7 @@ Eva Urban
 
 
   <li class="sponsor-item" itemscope itemtype="http://schema.org/Organization">
-    <a href="http://www.britac.ac.uk/" class="sponsor-logo sponsor-link" itemprop="url">
+    <a href="http://www.britac.ac.uk/" class="sponsor-logo partner-link" itemprop="url">
       <img src="themes/yellow-swan/img/BA.png" alt="British Academy" class="photo" itemprop="image">
     </a>
   </li>
