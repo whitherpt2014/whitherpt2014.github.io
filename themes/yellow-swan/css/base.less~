@@ -88,9 +88,9 @@ nav {
  // text-shadow: 2px 4px 2px rgba(0,0,0,.3);
 }
 .tagline {
-  margin-bottom:50px;
+  margin-bottom:20px;
   font-size: 2em;
-  letter-spacing: -.02em;
+  letter-spacing: -.00em;
   text-shadow: 2px 4px 2px rgba(0,0,0,.3);
 }
 .call-action-area .price {
