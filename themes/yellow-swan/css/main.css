@@ -485,6 +485,10 @@ nav {
   display: block;
   font-size: 12px;
 }
+.chair {
+  display: block;
+  font-size: 12px;
+}
 /* =============================================================================
    SPONSORS  and  PARTNERS
    ========================================================================== */
@@ -860,6 +864,9 @@ nav {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 .speakers-company {
+  color: #999;
+}
+.chair {
   color: #999;
 }
 .schedule-slot {
